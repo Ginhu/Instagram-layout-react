@@ -21,6 +21,7 @@ export default function Post(props) {
     if(curtida == "heart-outline") {
       setCurtida("heart")
       setClasseCurtida("postagemCurtida")
+      setContador((contador+1))
     } else {
       setCurtida("heart-outline")
       setClasseCurtida("")
