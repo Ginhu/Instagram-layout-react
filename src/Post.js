@@ -24,7 +24,7 @@ export default function Post(props) {
     } else {
       setCurtida("heart-outline")
       setClasseCurtida("")
-      setContador((contador-0.001))
+      setContador((contador-1))
     }
   }
 
@@ -32,7 +32,7 @@ export default function Post(props) {
     if(curtida == "heart-outline") {
     setCurtida("heart")
     setClasseCurtida("postagemCurtida")
-    setContador((contador+0.001))
+    setContador((contador+1))
     }
   }
 
@@ -67,7 +67,7 @@ export default function Post(props) {
               <div class="curtidas">
                 <img src="assets/img/respondeai.svg" alt="respondeai"/>
                 <div class="texto" data-test="likes-number">
-                  Curtido por <strong>{props.curtidoPor}</strong> e <strong>outras {contador} pessoas</strong>
+                  Curtido por <strong>{props.curtidoPor}</strong> e <strong>outras {contador.toLocaleString('pt-BR')} pessoas</strong>
                 </div>
               </div>
             </div>
